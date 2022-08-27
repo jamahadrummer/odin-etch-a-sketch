@@ -1,8 +1,31 @@
 body{
     display: flex;
-    background-color: #001524
+    background-color: #001524;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .gridContainer{
     display: inherit;
+    flex-basis: 800px;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.grid{
+    font-family: sans-serif;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    background-color: #15616d;
+    flex-basis: 50px;
+    flex-grow: 0;
+    height: 50px;
+}
+
+.hover {
+    border: 2px solid grey
 }
