@@ -5,7 +5,6 @@ function gridAdd(insert, container, text) {
 }
 
 const gridContainer = document.querySelector('.gridContainer')
-// const gridDiv = document.createElement('div')
 
 for (i = 1; i <= 256; i++) {
 	const gridDiv = document.createElement('div')
@@ -13,9 +12,21 @@ for (i = 1; i <= 256; i++) {
 }
 
 const grids = document.querySelectorAll('.grid')
+const reset = document.querySelector('#reset')
 
 grids.forEach(square => {
 	square.addEventListener('mouseover', function () {
 		square.classList.add('hover')
 	})
 });
+
+
+
+
+reset.addEventListener('click', function () {
+	grids.forEach(square => {
+		square.classList.remove('hover')
+	})
+}
+
+)

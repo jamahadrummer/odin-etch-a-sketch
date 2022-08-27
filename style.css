@@ -1,19 +1,51 @@
 body {
+	font: sans-serif;
+	color: #ffecd1;
 	display: flex;
 	background-color: #481909;
 	margin: 0;
 	/* flex-direction: column; */
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .sidebar {
-	display:flex;
+	font: inherit;
+	color: inherit;
+	display: flex;
+	flex: 1;
 	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+	height: 960px;
+}
+
+.sidebar input {
+	color: inherit;
+	font: inherit;
+	font-size: large;
+	background-color: #0c3940;
+	width: 100px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px black;
+}
+
+.sidebar button {
+	color: inherit;
+	font: inherit;
+	font-size: large;
+	background-color: #0c3940;
+	width: 100px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px black;
 }
 .gridContainer {
+	color: inherit;
+	flex: 1;
 	display: grid;
 	min-width: 960px;
 	width: 960px;
@@ -23,7 +55,11 @@ body {
 	box-shadow: 10px 10px 5px black;
 }
 
+.blank {
+	flex: 1;
+}
 .grid {
+	color: inherit;
 	font-family: sans-serif;
 	background-color: #15616d;
 	display: flex;
