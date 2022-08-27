@@ -10,6 +10,7 @@ body {
 }
 
 .sidebar {
+	min-width: 350px;
 	font: inherit;
 	color: inherit;
 	display: flex;
@@ -60,7 +61,7 @@ body {
 }
 .grid {
 	color: inherit;
-	font-family: sans-serif;
+	font-family: inherit;
 	background-color: #15616d;
 	display: flex;
 	align-items: center;
