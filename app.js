@@ -4,29 +4,30 @@ function gridAdd(insert, container, text) {
 	container.appendChild(insert)
 }
 
-const gridContainer = document.querySelector('.gridContainer')
-
-for (i = 1; i <= 256; i++) {
-	const gridDiv = document.createElement('div')
-	gridAdd(gridDiv, gridContainer, i)
+function gridBuild(size) {
+	for (i = 1; i <= size; i++) {
+		const gridDiv = document.createElement('div')
+		gridAdd(gridDiv, gridContainer, i)
+	}
+	const grids = document.querySelectorAll('.grid')
+	grids.forEach(square => {
+		square.addEventListener('mouseover', function () {
+			square.classList.add('hover')
+		})
+	})
 }
 
-const grids = document.querySelectorAll('.grid')
+const gridContainer = document.querySelector('.gridContainer')
 const reset = document.querySelector('#reset')
+const enter = document.querySelector('#enter')
 
-grids.forEach(square => {
-	square.addEventListener('mouseover', function () {
-		square.classList.add('hover')
-	})
-});
-
-
-
+enter.addEventListener('click', function () {
+	gridBuild(256)
+})
 
 reset.addEventListener('click', function () {
+	const grids = document.querySelectorAll('.grid')
 	grids.forEach(square => {
 		square.classList.remove('hover')
 	})
-}
-
-)
+})
