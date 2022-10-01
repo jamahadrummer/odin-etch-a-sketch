@@ -39,10 +39,12 @@ const reset = document.querySelector('#reset');
 const enter = document.querySelector('#enter');
 
 
+
 enter.addEventListener('click', function () {
 	let input = checkForm()
 	let totalGrid = gridMath(input)
 	gridClear(gridContainer);
+	gridContainer.style.gridTemplate = `repeat(${input}, 1fr) / repeat(${input}, 1fr)}`
 	gridBuild(totalGrid);
 });
 

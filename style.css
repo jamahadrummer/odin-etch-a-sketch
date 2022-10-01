@@ -57,8 +57,7 @@ body {
 	min-width: 960px;
 	width: 960px;
 	height: 960px;
-	grid-template-columns: repeat(16, 1fr);
-	grid-template-rows: repeat(16, 1fr);
+    /* grid-template: repeat(9, 1fr) / repeat(9, 1fr); */
 	box-shadow: 10px 10px 5px black;
 }
 
@@ -69,9 +68,9 @@ body {
 	color: inherit;
 	font-family: inherit;
 	background-color: #15616d;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+	/* align-items: center;
+	justify-content: center; */
 }
 
 .grid.hover {
