@@ -4,7 +4,7 @@ function gridAdd(insert, container, text) {
 	container.appendChild(insert);
 }
 
-function gridClear(container){
+function gridClear(container) {
 	container.innerHTML = '';
 };
 
@@ -21,13 +21,20 @@ function gridBuild(size) {
 	})
 }
 
+function checkForm() {
+	let value = document.getElementById('gridSize').value;
+	return value 
+}
+
 const gridContainer = document.querySelector('.gridContainer');
 const reset = document.querySelector('#reset');
 const enter = document.querySelector('#enter');
 
+
 enter.addEventListener('click', function () {
+	let input = checkForm()
 	gridClear(gridContainer);
-	gridBuild(256);
+	gridBuild(input);
 })
 
 reset.addEventListener('click', function () {
