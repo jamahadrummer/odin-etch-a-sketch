@@ -1,6 +1,6 @@
 function gridAdd(insert, container, text) {
 	insert.classList.add('grid');
-	insert.textContent = text;
+	// insert.textContent = text;
 	container.appendChild(insert);
 };
 
@@ -34,7 +34,7 @@ function checkForm() {
 	return value
 };
 
-const gridContainer = document.querySelector('.gridContainer');
+const gridContainer = document.getElementById('gridContainer');
 const reset = document.querySelector('#reset');
 const enter = document.querySelector('#enter');
 
@@ -44,7 +44,7 @@ enter.addEventListener('click', function () {
 	let input = checkForm()
 	let totalGrid = gridMath(input)
 	gridClear(gridContainer);
-	gridContainer.style.gridTemplate = `repeat(${input}, 1fr) / repeat(${input}, 1fr)}`
+	gridContainer.style.gridTemplate = `repeat(${input}, 1fr) / repeat(${input}, 1fr)`
 	gridBuild(totalGrid);
 });
 

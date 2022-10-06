@@ -49,7 +49,7 @@ body {
 	box-shadow: 2px 2px 2px black;
 	margin: 0px 5px;
 }
-.gridContainer {
+#gridContainer {
 	background-color: rgba(0, 0, 0, 0.648);
 	color: inherit;
 	flex: 1;
