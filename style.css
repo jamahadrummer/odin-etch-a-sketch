@@ -1,8 +1,78 @@
-body{
-    display: flex;
-    background-color: #001524
+body {
+	font-family: sans-serif;
+	color: #ffecd1;
+	display: flex;
+	background-color: #481909;
+	margin: 0;
+	/* flex-direction: column; */
+	align-items: center;
+	justify-content: flex-start;
 }
 
-.gridContainer{
-    display: inherit;
+.sidebar {
+	min-width: 350px;
+	font-family: inherit;
+	color: inherit;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	height: 960px;
+}
+
+.sidebar div {
+	gap: 50px;
+}
+
+.sidebar input {
+	color: inherit;
+	font-family: inherit;
+	font-size: large;
+	background-color: #0c3940;
+	width: 100px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px black;
+}
+
+.sidebar button {
+	color: inherit;
+	font-family: inherit;
+	font-size: large;
+	background-color: #0c3940;
+	width: 100px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px black;
+	margin: 0px 5px;
+}
+#gridContainer {
+	background-color: rgba(0, 0, 0, 0.648);
+	color: inherit;
+	flex: 1;
+	display: grid;
+	min-width: 960px;
+	width: 960px;
+	height: 960px;
+    /* grid-template: repeat(9, 1fr) / repeat(9, 1fr); */
+	box-shadow: 10px 10px 5px black;
+}
+
+.blank {
+	flex: 1;
+}
+.grid {
+	color: inherit;
+	font-family: inherit;
+	background-color: #15616d;
+	display: grid;
+	/* align-items: center;
+	justify-content: center; */
+}
+
+.grid.hover {
+	background-color: #0c3940;
 }
