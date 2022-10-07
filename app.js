@@ -13,7 +13,7 @@ function gridBuild(size) {
 		gridAdd(gridDiv, gridContainer);
 	}
 	const grids = document.querySelectorAll('.grid');
-	grids.forEach(square => {
+	grids.forEach(function (square) {
 		square.addEventListener('mouseover', function () {
 			square.classList.add('hover');
 		});
@@ -22,26 +22,24 @@ function gridBuild(size) {
 
 function gridMath(input) {
 	if (input > 0) {
-		let output = input * input
-		return output
-	} else { return NaN }
-}
-
+		let output = input * input;;
+		return output;
+	} else { return NaN };
+};
 
 function checkForm() {
-	let value = document.querySelector('#gridSize').value;
-	return value
+	let value = document.getElementById('gridSize').value;
+	return value;
 };
 
 const gridContainer = document.getElementById('gridContainer');
-const reset = document.querySelector('#reset');
-const enter = document.querySelector('#enter');
-
-
+const gridSize = document.getElementById('gridSize');
+const reset = document.getElementById('reset');
+const enter = document.getElementById('enter');
 
 enter.addEventListener('click', function () {
-	let input = checkForm()
-	let totalGrid = gridMath(input)
+	let input = checkForm();
+	let totalGrid = gridMath(input);
 	gridClear(gridContainer);
 	if (input <= 100) {
 		gridContainer.style.gridTemplate = `repeat(${input}, 1fr) / repeat(${input}, 1fr)`
@@ -49,9 +47,18 @@ enter.addEventListener('click', function () {
 	}
 });
 
+gridSize.addEventListener('keyup', function (e) {
+	if (e.code === 'Enter' || e.code === 'NumpadEnter') {
+		enter.click()
+	}
+})
+
 reset.addEventListener('click', function () {
 	const grids = document.querySelectorAll('.grid')
 	grids.forEach(square => {
 		square.classList.remove('hover');
 	});
 });
+
+
+
