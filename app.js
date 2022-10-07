@@ -1,6 +1,5 @@
-function gridAdd(insert, container, text) {
+function gridAdd(insert, container) {
 	insert.classList.add('grid');
-	// insert.textContent = text;
 	container.appendChild(insert);
 };
 
@@ -11,7 +10,7 @@ function gridClear(container) {
 function gridBuild(size) {
 	for (i = 1; i <= size; i++) {
 		const gridDiv = document.createElement('div');
-		gridAdd(gridDiv, gridContainer, i);
+		gridAdd(gridDiv, gridContainer);
 	}
 	const grids = document.querySelectorAll('.grid');
 	grids.forEach(square => {
@@ -44,8 +43,10 @@ enter.addEventListener('click', function () {
 	let input = checkForm()
 	let totalGrid = gridMath(input)
 	gridClear(gridContainer);
-	gridContainer.style.gridTemplate = `repeat(${input}, 1fr) / repeat(${input}, 1fr)`
-	gridBuild(totalGrid);
+	if (input <= 100) {
+		gridContainer.style.gridTemplate = `repeat(${input}, 1fr) / repeat(${input}, 1fr)`
+		gridBuild(totalGrid);
+	}
 });
 
 reset.addEventListener('click', function () {
